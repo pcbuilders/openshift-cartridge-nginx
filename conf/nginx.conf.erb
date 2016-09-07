@@ -88,9 +88,9 @@ http {
       log_not_found off;
     }
     
-    location /proxy_api {
-      proxy_pass $arg_url;
-      resolver 8.8.8.8 8.8.4.4;
+    location /live {
+      proxy_pass http://web.live.bigo.sg/$arg_sid;
+      #resolver 8.8.8.8 8.8.4.4;
     }
   }
 }
