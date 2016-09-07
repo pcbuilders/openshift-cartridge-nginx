@@ -49,7 +49,8 @@ http {
       '"$request" $body_bytes_sent "$http_referer" '
       '"$http_user_agent" "$http_x_forwarded_for"';
 
-    access_log  <%= ENV['OPENSHIFT_LOG_DIR'] %>/nginx_access.log  main;
+    access_log off;
+    error_log  <%= ENV['OPENSHIFT_LOG_DIR'] %>/nginx_error.log  main;
 
     sendfile on;
     keepalive_timeout 65;
