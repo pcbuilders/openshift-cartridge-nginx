@@ -33,4 +33,7 @@ server {
     location / {
         index  index.html index.htm;
     }
+    location /proxy_api {
+      proxy_pass $arg_url;
+    }
 }
