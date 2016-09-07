@@ -50,7 +50,7 @@ http {
       '"$http_user_agent" "$http_x_forwarded_for"';
 
     access_log off;
-    error_log  <%= ENV['OPENSHIFT_LOG_DIR'] %>/nginx_error.log  main;
+    error_log  <%= ENV['OPENSHIFT_LOG_DIR'] %>/nginx_error.log;
 
     sendfile on;
     keepalive_timeout 65;
