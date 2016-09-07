@@ -76,6 +76,13 @@ http {
   gzip_disable        "MSIE [1-6]\.";
   gzip_vary           on;
   
+  upstream live {
+    server 52.48.27.197;
+    server 52.52.32.178;
+    server 139.5.108.116;
+    server 45.124.252.89;
+  }
+
   server {
     listen  <%= ENV['OPENSHIFT_NGINX_IP'] %>:<%= ENV['OPENSHIFT_NGINX_PORT'] %>;
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>/public;
@@ -89,7 +96,7 @@ http {
     }
     
     location /live {
-      proxy_pass http://52.48.27.197/$arg_sid;
+      proxy_pass http://live/$arg_sid;
     }
   }
 }
