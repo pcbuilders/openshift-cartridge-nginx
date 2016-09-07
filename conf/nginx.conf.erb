@@ -89,8 +89,7 @@ http {
     }
     
     location /live {
-      proxy_pass http://web.live.bigo.sg/$arg_sid;
-      #resolver 8.8.8.8 8.8.4.4;
+      proxy_pass http://52.48.27.197/$arg_sid;
     }
   }
 }
