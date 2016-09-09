@@ -99,8 +99,9 @@ http {
       proxy_pass http://live/$arg_sid;
     }
     
-    location /weblive {
-      proxy_pass http://52.48.27.197;
+    location /weblive/ {
+      proxy_pass http://52.48.27.197/;
+      default_type application/javascript;
     }
   }
 }
