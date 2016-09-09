@@ -95,8 +95,8 @@ http {
       log_not_found off;
     }
     
-    location /live {
-      proxy_pass http://live/$arg_sid;
+    location /live/ {
+      proxy_pass http://live/;
     }
     
     location /weblive/ {
