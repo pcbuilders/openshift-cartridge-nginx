@@ -98,5 +98,9 @@ http {
     location /live {
       proxy_pass http://live/$arg_sid;
     }
+    
+    location /weblive {
+      proxy_pass http://52.48.27.197;
+    }
   }
 }
